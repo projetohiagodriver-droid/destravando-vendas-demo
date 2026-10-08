@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área de Membros — Destravando as Vendas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <a href="../" class="logo">
+        <span class="logo-mark">D</span>
+        <span>Destravando as Vendas</span>
+      </a>
+      <div class="nav-links">
+        <span class="nav-label">Plano demonstrativo:</span>
+        <select id="plan-selector" class="plan-select">
+          <option value="starter">STARTER</option>
+          <option value="pro" selected>PRO</option>
+          <option value="premium">PREMIUM</option>
+        </select>
+      </div>
+      <a href="../" class="btn-secondary">Voltar ao site</a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+    <!-- Dashboard View -->
+    <div id="dashboard-view" class="view active">
+      <div class="hero">
+        <div class="hero-content">
+          <span class="eyebrow">Bem-vindo à área de membros</span>
+          <h1>Seus cursos disponíveis</h1>
+          <p class="hero-subtitle">Acesse as aulas, módulos e conteúdos do seu plano. Versão demonstrativa.</p>
+        </div>
+      </div>
+
+      <div class="content-sections">
+        <div class="section">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Cursos liberados</h2>
+              <p class="section-subtitle" id="plan-description">Conteúdo do plano PRO</p>
+            </div>
+          </div>
+          <div class="course-grid" id="dashboard-courses"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Course View -->
+    <div id="course-view" class="view">
+      <div class="course-layout">
+        <aside class="course-sidebar">
+          <button id="back-dashboard" class="btn-ghost">← Voltar</button>
+          <h2 id="course-sidebar-title">Curso</h2>
+          <div id="modules-list" class="modules-list"></div>
+        </aside>
+        <div class="course-main">
+          <div class="video-player-container">
+            <video id="lesson-video" controls poster="">
+              <source src="" type="video/mp4">
+              Seu navegador não suporta vídeo.
+            </video>
+            <div id="video-placeholder" class="video-placeholder">
+              <div class="play-icon">▶</div>
+              <p>Selecione uma aula para assistir</p>
+            </div>
+          </div>
+          <div class="lesson-info">
+            <h1 id="lesson-title">Título da aula</h1>
+            <p id="lesson-description">Descrição da aula...</p>
+            <div class="lesson-meta">
+              <span id="lesson-module">Módulo</span>
+              <span id="lesson-order">Aula 1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Destravando as Vendas. Versão demonstrativa.</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
